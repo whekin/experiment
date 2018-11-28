@@ -1,13 +1,14 @@
 ﻿program color; 
 const
     pencilCount = 5;
+    eventCount = 3;
     n = 100;
 var
     box: array [0..pencilCount - 1] of integer;
     firstPencilIndex, secondPencilIndex, i: integer;
     eventNumber: integer;
-    m: array [0..2] of integer;
-
+    m: array [0..eventCount - 1] of integer;
+    relativeFreq: array [0..eventCount - 1] of real;
 begin 
     box[0] := 0; 
     box[1] := 0; 
@@ -31,9 +32,11 @@ begin
         else
             eventNumber := 2;
         
-        m[eventNumber - 1] += 1;
-            
+        m[eventNumber - 1] += 1; 
     end;
     
-    writeln(m);
+    for i := 0 to eventCount - 1 do
+        relativeFreq[i] := m[i] / n;
+    
+    writeln(relativeFreq);
 end.
