@@ -6,6 +6,7 @@ var
     box: array [0..pencilCount - 1] of integer;
     firstPencilIndex, secondPencilIndex, i: integer;
     eventNumber: integer;
+    m: array [0..2] of integer;
 
 begin 
     box[0] := 0; 
@@ -29,7 +30,10 @@ begin
                 eventNumber := 3
         else
             eventNumber := 2;
-        writeln(eventNumber);
+        
+        m[eventNumber - 1] += 1;
             
     end;
+    
+    writeln(m);
 end.
