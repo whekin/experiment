@@ -9,11 +9,13 @@ var
     eventNumber: integer;
     m: array [0..eventCount - 1] of integer;
     relativeFreq: array [0..eventCount - 1] of real;
-begin 
-    box[0] := 0; 
-    box[1] := 0; 
-    box[2] := 0; 
-    box[3] := 1; 
+    p: array [0..eventCount - 1] of real;
+    mathProbability: array [0..eventCount - 1] of real = (0.3, 0.6, 0.1);
+begin
+    box[0] := 0;
+    box[1] := 0;
+    box[2] := 0;
+    box[3] := 1;
     box[4] := 1;
     
     for i := 0 to n - 1 do
@@ -36,7 +38,14 @@ begin
     end;
     
     for i := 0 to eventCount - 1 do
+    begin
         relativeFreq[i] := m[i] / n;
+        p[i] := abs(mathProbability[i] - relativeFreq[i]);
+    end;
     
+    writeln('Относительная частота:');
     writeln(relativeFreq);
+    
+    writeln('Абсолютная поргешность событий:');
+    writeln(p);
 end.
