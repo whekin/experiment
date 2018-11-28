@@ -7,11 +7,6 @@ var
     firstPencilIndex, secondPencilIndex, i: integer;
     eventNumber: integer;
 
-function doExperiment(pencilCount: integer): array of integer;
-begin
-    
-end;
-
 begin 
     box[0] := 0; 
     box[1] := 0; 
