@@ -43,8 +43,13 @@ begin
         p[i] := abs(mathProbability[i] - relativeFreq[i]);
     end;
     
+    writeln('Частота');
+    writeln(m);
+    writeln;
+    
     writeln('Относительная частота:');
     writeln(relativeFreq);
+    writeln;
     
     writeln('Абсолютная поргешность событий:');
     writeln(p);
