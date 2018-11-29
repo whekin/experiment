@@ -15,8 +15,8 @@ var
     mathProbability: array [0..eventCount - 1] of real;
 begin
     mathProbability[0] := 0.3;
-    mathProbability[0] := 0.6;
-    mathProbability[0] := 0.1;
+    mathProbability[1] := 0.6;
+    mathProbability[2] := 0.1;
     
     for i := 0 to blueCount - 1 do
         box[i] := 0;
